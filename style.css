@@ -1,0 +1,198 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  max-height: 100;
+}
+
+audio {
+  height: 0;
+  width: 0;
+}
+
+h1 {
+  z-index: 1;
+  font-size: 3rem;
+  position: absolute;
+  left: 50%;
+  top: 12%;
+  transform: translate(-50%, -50%);
+  color: white;
+}
+
+.bgpic {
+  width: 100%;
+  height: 99vh;
+  z-index: -1;
+  size: cover;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+
+.panneau {
+  width: 22%;
+  height: 50%;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: 1;
+}
+
+img {
+  width: 50%;
+  height: 50%;
+}
+
+.snowman {
+  width: 30%;
+  height: 60%;
+  position: absolute;
+  left: 25px;
+  z-index: 1;
+  bottom: 0;
+}
+
+.corps {
+  position: absolute;
+  bottom: 15px;
+  z-index: 1;
+  left: 15px;
+}
+
+.chapeau {
+  position: absolute;
+  bottom: 270px;
+  z-index: 3;
+}
+
+.tete {
+  position: absolute;
+  bottom: 100px;
+  z-index: 2;
+  left: 15px;
+}
+
+/* Animation du snowman*/
+.snowman {
+  animation: jumpFlip 4s linear infinite;
+  /* animation-play-state: running; */
+}
+
+.animationPlayStatePaused {
+  animation-play-state: paused;
+}
+
+.animationPlayStateRunning {
+  animation-play-state: running;
+}
+
+@keyframes jumpFlip {
+  0%,
+  100% {
+    transform: translateX(0) translateY(0) rotateY(0deg); /* Position de départ */
+  }
+
+  25% {
+    transform: translateX(200px) translateY(-100px) rotateY(180deg); /* Saut et rotation à 180° */
+  }
+  50% {
+    transform: translateX(400px) translateY(0) rotateY(360deg); /* Retour au sol avec rotation complète */
+  }
+  75% {
+    transform: translateX(600px) translateY(-100px) rotateY(540deg); /* Deuxième saut et rotation à 540° */
+  }
+}
+
+/* Flocons de neige */
+.snowflakes {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  pointer-events: none; /* Pour ne pas gêner les autres éléments */
+  z-index: 2;
+}
+
+.snowflake {
+  position: absolute;
+  top: -10px;
+  background: white;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  opacity: 0.8;
+  animation: snowfall 5s linear infinite;
+}
+
+/* Animation de chute des flocons */
+@keyframes snowfall {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh);
+    opacity: 0;
+  }
+}
+
+/* Flocons supplémentaires avec variations de taille et de vitesse */
+.snowflake:nth-child(1) {
+  left: 10%;
+  animation-duration: 3s;
+  width: 5px;
+  height: 5px;
+}
+.snowflake:nth-child(2) {
+  left: 20%;
+  animation-duration: 4s;
+  width: 6px;
+  height: 6px;
+}
+.snowflake:nth-child(3) {
+  left: 30%;
+  animation-duration: 5s;
+  width: 7px;
+  height: 7px;
+}
+.snowflake:nth-child(4) {
+  left: 40%;
+  animation-duration: 6s;
+  width: 8px;
+  height: 8px;
+}
+.snowflake:nth-child(5) {
+  left: 50%;
+  animation-duration: 7s;
+  width: 5px;
+  height: 5px;
+}
+.snowflake:nth-child(6) {
+  left: 60%;
+  animation-duration: 3.5s;
+  width: 6px;
+  height: 6px;
+}
+.snowflake:nth-child(7) {
+  left: 70%;
+  animation-duration: 4.5s;
+  width: 7px;
+  height: 7px;
+}
+.snowflake:nth-child(8) {
+  left: 80%;
+  animation-duration: 5.5s;
+  width: 8px;
+  height: 8px;
+}
+.snowflake:nth-child(9) {
+  left: 90%;
+  animation-duration: 6.5s;
+  width: 6px;
+  height: 6px;
+}
